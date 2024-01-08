@@ -68,7 +68,7 @@ ol {
 .content__list {
   position: relative;
   block-size: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__list::-webkit-scrollbar {
@@ -151,6 +151,7 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline 1px #fff;
+  text-underline-offset: 3px;
 }
 
 .content__card-link:focus-visible {
@@ -211,12 +212,17 @@ fieldset {
   text-underline-offset: 3px;
 }
 
+.search-form__label:has(.search-form__pseudo-checkbox):has(:hover) {
+  text-decoration: underline 1px;
+  text-underline-offset: 3px;
+}
+
 .search-form__textfield {
   width: 225px;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  color: rgba(255, 255, 255, 0.70);
+  color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -246,7 +252,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   background-color: transparent;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
